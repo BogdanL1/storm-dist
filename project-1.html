@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Storm</title>
+  <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+  <meta name="description" content="">
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600|Roboto:300,300i,400,500,700" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.min.css">
+  <link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
+
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/jquery.backgroundvideo.min.js"></script>
+  <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="js/jquery.mousewheel.min.js"></script>
+</head>
+<body>
+
+  <div id="preloader" class="preloader">
+    <div class="preloader__inner">
+      <div class="preloader__logo" id="preloader-logo">
+        <div class="preloader__logo-top">
+          <img src="img/logo-top.png" alt="Logo-top">
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <section class="project">
+    <div class="project__inner">
+      <div class="callback">
+        <a class="callback__link" href="#" id="back-portfolio" onclick="history.back();return false;">ВЕРНУТЬСЯ НАЗАД</a>
+      </div>
+      
+      <div class="project__preview">
+        <div class="project__preview-iphone">
+          <img src="img/iphone-1.png" alt="iphone-1">
+        </div>
+
+        <div class="project__preview-macbook">
+          <img src="img/macbook-1.png" alt="macbook-1">
+        </div>
+
+        <div class="project__preview-tablet">
+          <img src="img/tablet-1.png" alt="tablet-1">
+        </div>
+      </div>
+
+      <div class="project__link-wrap">
+        <a href="#" class="project__link">WWW.CRYSTALL.COM</a>
+      </div>
+
+      <div class="project__text-block">
+        <p class="project__text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div id="overlay" class="overlay"></div>
+
+
+  <script src="js/script.js"></script>
+
+<!--
+  =============================
+              VIDEO BG
+  =============================
+-->
+  <script>
+  $(document).ready(function() {
+    var videobackground = new $.backgroundVideo($('body'), {
+      "align": "centerXY",
+      "width": 1280,
+      "height": 720,
+      "path": "media/",
+      "filename": "sea_2",
+      "types": ["mp4", "ogv", "webm"],
+      "preload": true,
+      "autoplay": true,
+      "loop": true,
+      "muted": true
+    });
+  });
+</script>
+
+
+<script>
+  $(document).ready( function(){
+    $('.project').addClass('project-active');
+    var pageH = $('.project').height();
+    $('.content-viewport__inner').height(pageH);
+  });
+</script>
+<script>
+    (function($){
+        $(window).on("load",function(){
+            $("#scrollbar").mCustomScrollbar({
+              scrollbarPosition: 'otside'
+            });
+
+        });
+    })(jQuery);
+</script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Storm</title>
+  <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+  <meta name="description" content="">
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600|Roboto:300,300i,400,500,700" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.min.css">
+  <link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
+
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/jquery.backgroundvideo.min.js"></script>
+  <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="js/jquery.mousewheel.min.js"></script>
+</head>
+<body>
+
+  <div id="preloader" class="preloader">
+    <div class="preloader__inner">
+      <div class="preloader__logo" id="preloader-logo">
+        <div class="preloader__logo-top">
+          <img src="img/logo-top.png" alt="Logo-top">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="main-content">
+    <div class="content-viewport">
+      <div class="callback">
+        <a class="callback__link" href="#" id="back-portfolio" onclick="history.back();return false;">ВЕРНУТЬСЯ НАЗАД</a>
+      </div>
+
+      <section class="index-content  about  service-desc" id="about-content">
+        <div class="index-content__inner">
+          <h1 class="index-content__title">
+            ПРОДВИЖЕНИЕ
+            <span class="storm-ghost">storm</span>
+          </h1>
+
+          <div class="about__text">
+            <p>Каждый сайт, после создания, должен быть оптимизирован для продвижения, что позволяет ускорить скорость его индексации поисковыми роботами по ключевым словам, и повышает рейтинг сайта в поисковых системах. После оптимизации студия разрабатывает план продвижения сайта в интернете с помощью маркетинговых инструментов: SEO, SMM или контекстной рекламы.</p>
+          </div>
+
+          <div class="service-desc__btn-wrap">
+            <button class="service-desc__btn" id="service-order">Заказать услугу</button>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <div id="overlay" class="overlay"></div>
+
+
+  <script src="js/script.js"></script>
+
+<!--
+  =============================
+              VIDEO BG
+  =============================
+-->
+  <script>
+  $(document).ready(function() {
+    var videobackground = new $.backgroundVideo($('body'), {
+      "align": "centerXY",
+      "width": 1280,
+      "height": 720,
+      "path": "media/",
+      "filename": "sea_2",
+      "types": ["mp4", "ogv", "webm"],
+      "preload": true,
+      "autoplay": true,
+      "loop": true,
+      "muted": true
+    });
+  });
+</script>
+
+
+<script>
+  $(document).ready( function(){
+    $('.index-content').addClass('content-active');
+    var pageH = $('.index-content').height();
+    $('.content-viewport__inner').height(pageH);
+  });
+</script>
+<script>
+    (function($){
+        $(window).on("load",function(){
+            $("#scrollbar").mCustomScrollbar({
+              scrollbarPosition: 'otside'
+            });
+
+        });
+    })(jQuery);
+</script>
+</body>
+</html>
